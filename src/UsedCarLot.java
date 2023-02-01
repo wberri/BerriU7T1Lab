@@ -7,7 +7,7 @@ public class UsedCarLot {
         inventory = new ArrayList<Car>();
     }
 
-    public ArrayList<Car> get(){
+    public ArrayList<Car> getInventory(){
         return inventory;
     }
 
@@ -15,8 +15,15 @@ public class UsedCarLot {
         inventory.add(car);
     }
 
-    /* public boolean swap(int one, int two){
+    public boolean swap(int one, int two){
+        if (one<inventory.size() && two<inventory.size()){
+            Car temp = inventory.get(two);
+            inventory.set(two, inventory.get(one));
+            inventory.set(one, temp);
+            return true;
+        } else{
+            return false;
+        }
 
-        inventory.set(inventory.get(one));
-    }*/
+    }
 }
